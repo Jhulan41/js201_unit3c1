@@ -4,6 +4,7 @@ let arr= JSON.parse(localStorage.getItem("products")) || [];
 
 function showdata(data){
     document.getElementById("all_products").innerHTML=null;
+   
 
     data.map(function(element,index){
 
@@ -31,6 +32,7 @@ function showdata(data){
 
         div.append(image,p1,p2,p3,removeBtn)
         document.getElementById("all_products").append(div);
+       
         
 
 
@@ -38,6 +40,7 @@ function showdata(data){
 }
 
 showdata(arr);
+
 
 function removeproduct(index){
 

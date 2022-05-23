@@ -10,6 +10,7 @@ function Product(t,d,p,i){
 let arr=[];
 function submitProducts(e){
     e.preventDefault();
+   
 
     let form= document.getElementById("products");
     let type=form.type.value;
@@ -21,6 +22,10 @@ function submitProducts(e){
     arr.push(P);
     // console.log(arr);
     localStorage.setItem("products",JSON.stringify(arr));
+    document.getElementById("type").value=null;
+    document.getElementById("desc").value=null;
+    document.getElementById("price").value=null;
+    document.getElementById("image").value=null;
     
     
 
